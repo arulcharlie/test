@@ -1,0 +1,132 @@
+<html>
+<head>
+    <script type="text/javascript">
+  
+	function clk_me()
+	{
+		a=document.register.uname.value;
+		b=document.register.upass.value;
+		c=document.register.mailid.value;
+		//alert(document
+		x=document.getElementsByName("sex")[0].checked;
+		y=document.getElementsByName("sex")[1].checked;
+		//alert("male="+x);
+		//alert("female="+y);
+		d=document.getElementsByName("branch")[0].value;
+		e=document.getElementsByName("mal")[0].checked;
+		f=document.getElementsByName("eng")[0].checked;
+        //alert("a="+a+"b="+b+"x="+x+"y="+y+"d="+d+"e="+e+"f"+f);
+        n=document.getElementById("error1");
+        p=document.getElementById("error2");
+        m=document.getElementById("error3");
+        g=document.getElementById("error4");
+        r=document.getElementById("error5");
+        l=document.getElementById("error6");
+		if(a=="")
+		{
+            n.innerHTML="enter your name";
+		 
+		}
+        else
+            n.innerHTML="";
+        if(b=="")
+		{
+		    p.innerHTML="enter password";
+		}
+		else if(b.length<6)
+		{
+		     p.innerHTML="atleast 6 character and including numeric";
+		}
+        else
+            p.innerHTML="";
+		if(c=="")
+		{
+		     m.innerHTML="enter your email id";
+		}
+        else
+            m.innerHTML="";
+		if(x=="" && y=="")
+		{
+            
+		      g.innerHTML="select your gender";
+        
+		}
+        else
+            g.innerHTML="";
+        
+		if(d=="")
+		{
+		      r.innerHTML="select your branch";
+		}
+        else
+              r.innerHTML="";
+        if(e==false&&f==false)
+        {
+            l.innerHTML="select language";
+        }
+        else
+            l.innerHTML="";
+		
+	}
+	</script>
+      <style>
+        .n1
+        {
+            color:#ff0000
+        }
+       
+        
+        </style>
+</head>
+	<body>
+	   <form name="register" >
+	    
+		<center>
+	   <table align="center" bgcolor=" #9999ff" height="50%" width="50%">
+    <tr>
+        <td colspan="3" bgcolor=" #808080"><h1 align="center">REGISTRATION FORM<h1></td>
+	<tr>
+		<td><label>username</label></td>
+		<td><input type="text" id="uname" placeholder="name"> </td>
+		<td><label id=error1 class="n1"></label></td>
+ 
+	</tr>
+	<tr>
+		<td><label>password</label></td>
+		<td><input type="text" id="upass" placeholder="password"></td>
+		<td><label id=error2 class="n1"></label></td>
+	</tr>
+	<tr>
+		<td><label>email id<label></td>
+		<td><input type="text" id="mailid" placeholder="e-mail"></td>
+		<td><label id=error3 class="n1"></label></td>
+ 
+	</tr>
+	<tr>
+		<td><label>Gender</label></td>
+		<td><input type="radio" name="sex" value="male">Male<input type="radio" name="sex" value="female">Female</td>      
+        <td><label id=error4 class="n1"></label></td>
+	</tr>
+	<tr>
+		<td><label>district</label></td>
+		<td><select name="branch"><option value="">choose branch</option><option>calicut<option>malappuram
+		<option>kannur</select></td>
+        <td><label id="error5" class="n1"></label></td>
+	</tr>
+	<tr>
+		<td><label>language</label></td>
+		<td><input type="checkbox" value="malayalam"name="mal">malayalam<input type="checkbox" value="english" name="eng">English</td>
+        <td><label id="error6"class="n1"></label></td>
+ 
+	</tr>
+	<tr>
+	<td>DOB<input type="date"></input></td></tr>
+	<tr>
+	   	<td colspan="3" align="center"><input type="button"  value="SUBMIT" onclick="clk_me()"></td>
+	</tr>
+	</table>
+	    </center>
+	   </form>
+	</body>
+</html>
+	
